@@ -27,12 +27,13 @@ class DaemonApi
         'user_agent'       => 'LBRY php-api',
       ]);
 
-      return $response->getJson() ?: [];
+      $json = $response->getJson();
+      return  $json ? $json['result'] : [];
     }
     catch (CurlException $e)
     {
       throw new DaemonException(
-        'Unable to connect to LBRY daemon at ' . static::LBRYNET_SERVER_ADDR . "\n" .
+        'Unable to connect to LBRY daemon at ' . static::LBRY_SERVER_ADDRESS . "\n" .
         'Error: ' . $e->getMessage());
     }
   }

@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1bc8ab697c5a442cc0ee0cff55ef6426",
     "content-hash": "c0640fcd2f3e2a122c170abd7e286e9f",
     "packages": [
         {
             "name": "lyoshenka/curl",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lyoshenka/curl.git",
-                "reference": "57345bf9ed704daee014d7f35aebfad5e757dc93"
+                "reference": "6a995a93cc553d33c3b1024d01e63d59ff302023"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lyoshenka/curl/zipball/57345bf9ed704daee014d7f35aebfad5e757dc93",
-                "reference": "57345bf9ed704daee014d7f35aebfad5e757dc93",
+                "url": "https://api.github.com/repos/lyoshenka/curl/zipball/6a995a93cc553d33c3b1024d01e63d59ff302023",
+                "reference": "6a995a93cc553d33c3b1024d01e63d59ff302023",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +41,7 @@
                 }
             ],
             "description": "A better way to cURL",
-            "time": "2017-01-24 21:56:15"
+            "time": "2017-01-24T22:31:54+00:00"
         }
     ],
     "packages-dev": [],
