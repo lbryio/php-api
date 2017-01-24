@@ -1,7 +1,6 @@
 {
     "name": "lbryio/php-api",
     "description": "LBRY API",
-    "version": "1.0.0",
     "homepage": "https://github.com/lbryio/php-api",
     "keywords": [
         "lbry",
