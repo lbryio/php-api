@@ -32,9 +32,7 @@ class DaemonApi
     }
     catch (CurlException $e)
     {
-      throw new DaemonException(
-        'Unable to connect to LBRY daemon at ' . static::LBRY_SERVER_ADDRESS . "\n" .
-        'Error: ' . $e->getMessage());
+      throw new DaemonException('Unable to connect to LBRY daemon ('. $e->getMessage() . ')');
     }
   }
 }

@@ -2,13 +2,27 @@
 
 ## Installation
 
-`composer require lbryio/php-api`
+```
+composer require lbryio/php-api
+```
 
 ## Example
 
-```
-$daemon = new lbry\DaemonApi();
-$claimsForOne = $daemon->api('claim_list', ['name' => 'one']);
+```php
+<?php
+
+require_once __DIR__.'/vendor/autoload.php';
+
+try
+{
+  $daemon = new lbry\DaemonApi();
+  $claims = $daemon->api('claim_list', ['name' => 'bellflower']);
+  var_export($claims);
+}
+catch (lbry\DaemonException $e)
+{
+  echo $e->getMessage() . "\n";
+}
 ```
 
 ## License
