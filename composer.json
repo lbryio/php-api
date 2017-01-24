@@ -1,0 +1,26 @@
+{
+    "name": "lbryio/php-api",
+    "description": "LBRY API",
+    "version": "1.0.0",
+    "homepage": "https://github.com/lbryio/php-api",
+    "keywords": [
+        "lbry",
+        "api"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Grintsvayg",
+            "email": "grin@lbry.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "lbry\\": "src/"
+        }
+    },
+    "require": {
+        "lyoshenka/curl": "^1.0"
+    }
+}
