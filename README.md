@@ -18,7 +18,7 @@ try
   $claims = lbry\DaemonApi::call('claim_list', ['name' => 'bellflower']);
   var_export($claims);
 }
-catch (lbry\DaemonException $e)
+catch (lbry\Exception $e)
 {
   echo $e->getMessage() . "\n";
 }

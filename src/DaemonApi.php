@@ -16,7 +16,8 @@ class DaemonApi
    * @param array  $params Parameters for the command
    *
    * @return array The result of the method call
-   * @throws DaemonException
+   * @throws ConnectionException when connecting to the daemon fails
+   * @throws ResponseException when the daemon returns an error or an invalid response
    */
   public static function call($method, array $params = [])
   {
@@ -35,11 +36,25 @@ class DaemonApi
       ]);
 
       $json = $response->getJson();
-      return  $json ? $json['result'] : [];
+
+      if ($json)
+      {
+        if (array_key_exists('result', $json))
+        {
+          return $json['result'];
+        }
+
+        if (array_key_exists('error', $json))
+        {
+          throw new ResponseException($json['error']['message'], $json['error']['code']);
+        }
+      }
+
+      throw new ResponseException('Invalid API response');
     }
     catch (CurlException $e)
     {
-      throw new DaemonException('Unable to connect to LBRY daemon ('. $e->getMessage() . ')');
+      throw new ConnectionException('Unable to connect to LBRY daemon ('. $e->getMessage() . ')');
     }
   }
 
