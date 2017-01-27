@@ -15,8 +15,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 try
 {
-  $daemon = new lbry\DaemonApi();
-  $claims = $daemon->api('claim_list', ['name' => 'bellflower']);
+  $claims = lbry\DaemonApi::call('claim_list', ['name' => 'bellflower']);
   var_export($claims);
 }
 catch (lbry\DaemonException $e)

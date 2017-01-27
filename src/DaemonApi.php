@@ -11,7 +11,14 @@ class DaemonApi
 
   protected static $requestId = 0;
 
-  public static function api($method, array $params = [])
+  /**
+   * @param string $method The name of the command to call
+   * @param array  $params Parameters for the command
+   *
+   * @return array The result of the method call
+   * @throws DaemonException
+   */
+  public static function call($method, array $params = [])
   {
     try
     {
@@ -34,5 +41,13 @@ class DaemonApi
     {
       throw new DaemonException('Unable to connect to LBRY daemon ('. $e->getMessage() . ')');
     }
+  }
+
+  /**
+   * @deprecated
+   */
+  public static function api($method, array $params = [])
+  {
+    return static::call($method, $params);
   }
 }
