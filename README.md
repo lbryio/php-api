@@ -1,4 +1,4 @@
-# PHP wrapper for [LBRY](https://github.com/lbryio/lbry) API
+# PHP wrapper for [LBRY](https://github.com/lbryio/lbry) and [LBRYcrd](https://github.com/lbryio/lbrycrd) APIs
 
 ## Installation
 
