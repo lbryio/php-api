@@ -4,7 +4,7 @@ namespace lbry;
 
 class LbrycrdApi extends BaseApi
 {
-  const LBRY_SERVER_ADDRESS = 'http://localhost:5279/lbryapi';
+  const LBRY_SERVER_ADDRESS = 'http://localhost:9245';
 
   /**
    * @param string $method    The name of the command to call
