@@ -4,7 +4,7 @@ namespace lbry;
 
 class DaemonApi extends BaseApi
 {
-  const LBRY_SERVER_ADDRESS = 'http://localhost:5279/lbryapi';
+  const LBRY_SERVER_ADDRESS = 'http://localhost:5279';
 
   /**
    * @param string $method The name of the command to call
