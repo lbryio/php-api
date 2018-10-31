@@ -26,4 +26,4 @@ catch (lbry\Exception $e)
 
 ## License
 
-MIT
+[MIT](https://github.com/lbryio/php-api/blob/master/LICENSE)
